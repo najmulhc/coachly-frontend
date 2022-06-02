@@ -21,6 +21,10 @@
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/function-component-definition": "off",
-    "global-require":"off"
+    "global-require":"off",
+    "prettier/prettier":"off",
+    "jsx-a11y/anchor-is-valid":"off",
+    "jsx-a11y/no-noninteractive-tabindex":"off",
+    "jsx-a11y/label-has-associated-control":"warn"
   }
 }
