@@ -1,0 +1,10 @@
+{
+  "editor.fontFamily": "operator mono lig",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+"[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+}
+}
