@@ -5,3 +5,6 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+input[type="email"]:focus ~ .input-email , input[type="email"]:focus-within ~ .input-email{
+    @apply text-secondary text-sm bg-white mt-[-25px] px-1
+}
