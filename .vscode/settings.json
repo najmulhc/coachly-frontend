@@ -1,5 +1,5 @@
 {
-  "editor.fontFamily": "operator mono lig",
+  "editor.fontFamily": "consolas",
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },

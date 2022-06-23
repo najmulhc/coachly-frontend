@@ -32,15 +32,15 @@ const Navbar = () => {
     <div className="flex flex-wrap place-items-center  ">
       <section className="  mx-auto">
         <nav className="flex justify-between  bg-base-100 text-accent w-screen">
-          <div className="px-5 xl:px-12 py-6 flex w-full items-center">
+          <div className="px-5 md:px-12 py-6 flex w-full items-center">
             <Link to="/" className="text-3xl font-bold font-heading" >
               <img className="h-9" src={navLogo} alt="logo" />
             </Link>
             <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
               {links}
             </ul>
-            <div className="hidden xl:flex items-center space-x-5  ">
-              <Link to="/" className="hover:text-secondary" >
+            <div className="flex items-center space-x-5 ml-auto ">
+              <Link to="/" className=" hidden md:inline-block hover:text-secondary" >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -77,12 +77,12 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          <Link to="/" className="xl:hidden flex items-center" >
-            <GiTicket className="w-6 h-6" />
+          <Link to="/" className="md:hidden flex items-center" >
+            
             <div className="dropdown dropdown-left flex  h-full ml-2 ">
               <label
                 tabIndex="0"
-                className="navbar-burger self-center mr-12 xl:hidden"
+                className="navbar-burger self-center mr-12 md:hidden"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

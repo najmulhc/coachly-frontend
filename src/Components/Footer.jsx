@@ -82,7 +82,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="space-y-3">
-            <div className="uppercase dark:text-base-100 ">Social media</div>
+            <div className="uppercase text-white dark:text-base-100 ">Social media</div>
             <div className="flex justify-start space-x-3 text-base-100">
               <Link
                 to="/"
@@ -134,7 +134,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="py-6 text-sm text-center dark:text-base-100 ">
+      <div className="py-6 text-sm text-center text-white dark:text-base-100 ">
         © 2022 Couchly Inc. All rights reserved.
       </div>
     </footer>
