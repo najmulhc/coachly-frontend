@@ -1,6 +1,6 @@
-import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form"; 
 
-const Login = () => {
+const Login = ({setAuthType}) => {
   const {
     register,
     handleSubmit,
@@ -60,6 +60,7 @@ const Login = () => {
               "Please enter your password for login"}
           </span>
         </label>
+        <p className="text-center text-gray-800">New Here? <button type="button" className="text-primary" onClick={()=>setAuthType(false)}  >some</button> </p>
         <button className="btn btn-primary mx-auto" type="submit">
           Login
         </button>

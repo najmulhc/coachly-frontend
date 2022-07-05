@@ -1,18 +1,99 @@
+import { useForm } from "react-hook-form";
+
 const Register = ({ setAuthType }) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const formSubmit = (data) => {
+    console.log(data);
+  };
   return (
-    <>
-      <h1>This is register page</h1>
-      <button
-        className="btn btn-primary"
-        type="button"
-        onClick={() => setAuthType(true)}
-      >
-        LOgin
-      </button>
-      <label htmlFor="my-modal" type="button" className="btn btn-secondary">
-        Close Modal
-      </label>
-    </>
+    <section>
+      <h1 className="text-center text-4xl font-bold text-accent">Register</h1>
+      <form onSubmit={handleSubmit(formSubmit)} className="w-full">
+        <div className="w-full form-control relative">
+          <label htmlFor="email" className="">
+            <input
+              type="email"
+              name="email"
+              placeholder=" "
+              {...register("email", {
+                pattern: "w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$",
+                required: true,
+              })}
+              className="h-12 text-lg px-2 outline-none w-full my-4 border-2 border-primary rounded-md text-primary focus:border-secondary focus:text-secondary transition duration-300"
+            />
+            <span className="input-email text-lg absolute left-4 top-[27px] mx-0 text-primary transition-all duration-200 ">
+              Email
+            </span>
+          </label>
+          <label className="label">
+            <span className="label-text-alt mt-[-20px] text-red-700">
+              {errors.email?.type === "required" &&
+                "you need to enter your email adddres"}
+              {errors.email?.type === "pattern" &&
+                "Please enter a valid email address"}
+            </span>
+          </label>
+        </div>
+        <label htmlFor="password" className="relative">
+          <input
+            type="password"
+            name="password"
+            placeholder=" "
+            {...register("password", {
+              required: true,
+            })}
+            className="h-12 text-lg px-2 outline-none w-full my-4 border-2 border-primary rounded-md text-primary focus:border-secondary focus:text-secondary transition duration-300"
+          />
+          <span className="input-password text-lg absolute left-4 top-[-2px] mx-0 text-primary transition-all duration-200">
+            Password
+          </span>
+        </label>
+        <label className="label">
+          <span className="label-text-alt mt-[-20px] text-red-700">
+            {errors.password?.type === "required" &&
+              "Please enter your password for login"}
+          </span>
+        </label>
+        <label htmlFor="confirmPassword" className="relative">
+          <input
+            type="password"
+            name="confirmPassword"
+            placeholder=" "
+            {...register("confirmPassword", {
+              required: true,
+            })}
+            className="h-12 text-lg px-2 outline-none w-full my-4 border-2 border-primary rounded-md text-primary focus:border-secondary focus:text-secondary transition duration-300"
+          />
+          <span className="input-password text-lg absolute left-4 top-[-2px] mx-0 text-primary transition-all duration-200">
+            Confirm Password
+          </span>
+        </label>
+        <label className="label">
+          <span className="label-text-alt mt-[-20px] text-red-700">
+            {errors.confirmPassword?.type === "required" &&
+              "Please retype your password to get confirmed"}
+          </span>
+        </label>
+        <p className="text-center text-gray-800">
+         Already Have an account?{" "}
+          <button
+            type="button"
+            className="text-primary"
+            onClick={() => setAuthType(true)}
+          >
+            some
+          </button>{" "}
+        </p>
+        <button className="btn btn-primary mx-auto" type="submit">
+        Register
+        </button>
+      </form>
+    </section>
   );
 };
 export default Register;
