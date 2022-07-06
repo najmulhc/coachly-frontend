@@ -13,11 +13,6 @@ const AuthModal = () => {
          {
           authType ?   <Login setAuthType={setAuthType} />: <Register setAuthType={setAuthType}/> 
          }
-          <div className="modal-action">
-            <label htmlFor="my-modal" className="btn">
-              Yay!
-            </label>
-          </div>
         </div>
       </div>
     </div>
